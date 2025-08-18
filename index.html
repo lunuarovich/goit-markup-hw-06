@@ -23,8 +23,8 @@
     <header class="header">
       <div class="container container-header">
         <nav class="nav-list">
-          <a class="link-logo" href="./index.html">
-            Web<span class="webstudio">Studio</span></a
+          <a class="logo header-logo" href="./index.html">
+            Web<span class="logo-part">Studio</span></a
           >
           <ul class="nav-list-item">
             <li><a class="link studio" href="./index.html">Studio</a></li>
@@ -46,6 +46,76 @@
             </li>
           </ul>
         </address>
+
+        <button class="menu-btn" type="button" data-menu-open>
+          <svg width="24" height="24" class="menu-icon-open">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu-container container">
+          <button class="mobile-menu-close" data-menu-close>
+            <svg width="8" height="8" class="menu-icon-close">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-menu-nav">
+            <ul class="menu-nav-list">
+              <li><a class="menu-nav-item studio-part" href="">Studio</a></li>
+              <li><a class="menu-nav-item" href="">Portfolio</a></li>
+              <li><a class="menu-nav-item" href="">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <address class="menu-add">
+            <ul class="menu-add-list">
+              <li>
+                <a class="menu-add-item numb-part" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a class="menu-add-item" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="menu-social-list">
+            <li class="menu-social-item">
+              <a class="menu-social-icons" href=""
+                ><svg width="24" height="24" class="menu-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-social-item">
+              <a class="menu-social-icons" href=""
+                ><svg width="24" height="24" class="menu-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-social-item">
+              <a class="menu-social-icons" href=""
+                ><svg width="24" height="24" class="menu-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-social-item">
+              <a class="menu-social-icons" href=""
+                ><svg width="24" height="24" class="menu-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -119,7 +189,11 @@
           <ul class="team-list">
             <li class="img-background">
               <img
-                src="./images/imgfirstperson.jpg"
+                srcset="
+                  ./images/team-1-min.jpg    1x,
+                  ./images/team-1@2x-min.jpg 2x
+                "
+                src="./images/team-1-min.jpg"
                 alt="Portrait of Mark Guerrero, Product Designer"
                 width="264"
                 height="260"
@@ -173,7 +247,11 @@
             </li>
             <li class="img-background">
               <img
-                src="./images/img2person.jpg"
+                srcset="
+                  ./images/team-2-min.jpg    1x,
+                  ./images/team-2@2x-min.jpg 2x
+                "
+                src="./images/team-2-min.jpg"
                 alt="Portrait of Tom Ford, Product Designer"
                 width="264"
                 height="260"
@@ -227,7 +305,11 @@
             </li>
             <li class="img-background">
               <img
-                src="./images/img3person.jpg"
+                srcset="
+                  ./images/team-3-min.jpg    1x,
+                  ./images/team-3@2x-min.jpg 2x
+                "
+                src="./images/team-3-min.jpg"
                 alt="Portrait of Camila Garcia, Product Designer"
                 width="264"
                 height="260"
@@ -281,7 +363,11 @@
             </li>
             <li class="img-background">
               <img
-                src="./images/img4person.jpg"
+                srcset="
+                  ./images/team-4-min.jpg    1x,
+                  ./images/team-4@2x-min.jpg 2x
+                "
+                src="./images/team-4-min.jpg"
                 alt="Portrait of Daniel Wilson, Product Designer"
                 width="264"
                 height="260"
@@ -337,7 +423,7 @@
         </div>
       </section>
 
-      <section class="section-portfolio">
+      <section class="section-portfolio hidden">
         <div class="container">
           <h2 class="portfolio">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -460,7 +546,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer hidden">
       <div class="container container-foot">
         <div class="container-logo">
           <a class="link-logo-footer" href="./index.html"
@@ -526,7 +612,7 @@
       </div>
     </footer>
 
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay is-open hidden">
       <div class="modal">
         <button class="but-close" type="button">
           <svg width="8" height="8" class="icon-close">
@@ -611,5 +697,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
