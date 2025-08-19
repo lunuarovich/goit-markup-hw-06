@@ -886,6 +886,11 @@ button {
 
 @media screen and (min-width: 768px) {
     .container-foot {
+        flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    column-gap: 24px;
+    row-gap: 72px;
         padding: 0 0 0 108px;
     }
 
@@ -898,6 +903,14 @@ button {
         width: 264px;
     }
 
+    .p-social {
+        text-align: start;
+    }
+
+    .social-list {
+        justify-content: start;
+    }
+
     .container-footer {
         width: calc((100% - 24px) / 2);
         }
@@ -908,7 +921,13 @@ button {
 
     .form-footer {
         flex-direction: row;
+        column-gap: 24px;
+        row-gap: 72px;
         }
+
+    .form-input-footer {
+        width: 264px;
+    }
 }
 
 @media screen and (min-width: 1158px) {
