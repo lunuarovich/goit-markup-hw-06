@@ -1,7 +1,3 @@
-.hidden {
-    display: none;
-}
-
 body {
     font-family: "Roboto", sans-serif;
     background-color: #ffffff;
@@ -345,7 +341,6 @@ button {
 /* Hero section */
 
 .section-one {
-    min-width: 320px;
     padding: 72px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-repeat: no-repeat;
@@ -387,10 +382,26 @@ button {
     background-color: #404bbf;
 }
 
+/* Hero section mob */
+
+.section-one {
+    max-width: 320px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-mob-min.jpg);
+}
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .section-one {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-mob@2x-min.jpg);
+    }
+}
+
+/* Hero section tab */
+
 @media screen and (min-width: 768px) {
     .section-one {
         padding: 112px 0;
-        min-width: 768px;
+        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-tab-min.jpg);
     }
 
     .h-one {
@@ -399,16 +410,31 @@ button {
         max-width: 496px;
         margin: 0px auto 36px auto;
     }
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .section-one {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-tab@2x-min.jpg);
+        }
+    }
 }
+
+/* Hero section desk */
 
 @media screen and (min-width: 1158px) {
     .section-one {
         padding: 188px 0;
         max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-desk-min.jpg);
     }
     
     .h-one {
         margin: 0px auto 48px auto;
+    }
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .section-one {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/office-desk@2x-min.jpg);
+        }
     }
 }
 
@@ -760,9 +786,9 @@ button {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    display: inline-block;
+    display: block;
     margin-bottom: 16px;
-    padding: 0 86px;
+    text-align: center;
 }
 
 .webstudio-footer {
@@ -775,7 +801,6 @@ button {
     line-height: 1.5;
     color: #f4f4fd;
     letter-spacing: 0.02em;
-    padding: 0 16px;
     width: 288px;
 }
 
@@ -887,19 +912,18 @@ button {
 @media screen and (min-width: 768px) {
     .container-foot {
         flex-direction: row;
-    justify-content: start;
-    align-items: baseline;
-    column-gap: 24px;
-    row-gap: 72px;
+        justify-content: start;
+        align-items: baseline;
+        column-gap: 24px;
+        row-gap: 72px;
         padding: 0 0 0 108px;
     }
 
     .link-logo-footer {
-        padding: 0 0px;
+        text-align: start;
     }
 
     .p-footer {
-        padding: 0 0px;
         width: 264px;
     }
 
@@ -940,7 +964,7 @@ button {
         align-items: baseline;
         flex-wrap: nowrap;
         gap: 0px;
-        padding: 0;
+        padding: 0 15px;
         }
 
     .container-logo {
@@ -979,7 +1003,7 @@ button {
 }
 
 .modal {
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 16px 16px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1174,5 +1198,6 @@ input:checked+label>span {
 @media screen and (min-width: 768px) {
     .modal {
         width: 408px;
+        padding: 72px 24px 24px 24px;
     }
 }
